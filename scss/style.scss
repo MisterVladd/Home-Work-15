@@ -1,0 +1,14 @@
+@import 'resets';
+@import 'vars';
+@import 'mixins';
+@import 'base';
+
+
+//sections
+@import 'sections/join';
+@import 'sections/header';
+@import 'sections/welcome';
+@import 'sections/owl.carousel.scss';
+@import 'sections/services';
+@import 'sections/doctor';
+@import 'sections/footer';

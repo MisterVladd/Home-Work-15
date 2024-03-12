@@ -1,0 +1,200 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40rem 0rem 54rem 0rem;
+    gap: 10rem;
+
+    &__logo {
+        font-weight: 600;
+        font-size: 24rem;
+        color: var(--color-desc);
+    }
+
+    &__menu {
+        @include desktop {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            /*це щоб можна було скролити у бургер меню */
+            transition: all 0.3s ease 0s;
+            background-color: rgba(19, 20, 54, 0.96);
+            padding: 70px 10px 20px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 2;
+
+            &.active {
+                top: 0;
+            }
+        }
+
+        @include mobile {
+
+            &.active {
+                top: 0;
+
+                .header__search {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 24rem;
+
+        @include desktop {
+            display: block;
+            text-align: center;
+
+            & li {
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    &__form {
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: var(--font-size);
+        color: #000;
+        transition: 0.2s all ease-in-out;
+        position: relative;
+
+        @include desktop{
+                font-size: 26rem;
+                color: var(--standart-color);
+        }
+
+        &:hover::before,
+        &.is-active::before {
+            transform: scale(1);
+        }
+
+        &.is-active,
+        &:hover {
+            font-weight: 600;
+            color: var(--hover-color);
+        }
+
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: var(--hover-color);
+            bottom: -6px;
+            width: 71.2%;
+            height: 2px;
+            left: 15%;
+            transform: translateX(-50%);
+            transform: scale(0);
+            transition: 0.2s all ease-in-out;
+        }
+    }
+
+    &__search {
+        display: none;
+    }
+
+    &__burger {
+        display: none;
+
+        @include desktop {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
+
+            & span {
+                position: absolute;
+                background-color: black;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                background-color: black;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:before {
+                top: 0;
+            }
+
+            &:after {
+                bottom: 0;
+            }
+
+            &.active span {
+                transform: scale(0);
+            }
+
+            &.active:before {
+                transform: rotate(45deg);
+                top: 9px;
+                background-color: var(--standart-color);
+            }
+
+            &.active:after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+                background-color: var(--standart-color);
+            }
+        }
+    }
+}
+
+.header-form {
+    border-radius: 50rem;
+    background: #000;
+    width: 278rem;
+    display: flex;
+    gap: 5rem;
+    padding: 10rem 15rem 10rem 18rem;
+
+    &__input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: none;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14rem;
+        color: var(--standart-color);
+
+        &::placeholder {
+            color: var(--standart-color);
+        }
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        width: 24rem;
+        height: 24rem;
+    }
+}

@@ -1,0 +1,98 @@
+.services {
+    margin-bottom: 111rem;
+    text-align: center;
+
+    &__title {
+        font-weight: 700;
+        font-size: 48rem;
+        color: var(--color-desc);
+        margin-bottom: 70rem;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: var(--font-size);
+        color: var(--color-desc);
+        max-width: 837rem;
+        margin-inline: auto;
+        margin-bottom: 123rem;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+        gap: 30rem;
+        text-align: center;
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        padding: 46rem 26rem 46rem 26rem;
+        background: #f9f1fe;
+        border-radius: 15rem;
+        transition: .3s all ease-in-out;
+
+        svg {
+            fill: var(--color-desc);
+        }
+
+        &:hover {
+            background: var(--hover-color);
+            color: var(--standart-color);
+
+            svg {
+                fill: var(--standart-color);
+            }
+
+            .services__item-title {
+                color: var(--standart-color);
+            }
+
+            .services__item-desc {
+                color: var(--standart-color);
+            }
+
+            .services__item-link {
+                color: var(--standart-color);
+
+                svg {
+                    fill: var(--standart-color);
+                }
+            }
+        }
+    }
+
+    &__item-title {
+        margin-top: 27rem;
+        margin-bottom: 17rem;
+        font-weight: 600;
+        font-size: 24rem;
+        color: var(--color-desc);
+    }
+
+    &__item-desc {
+        font-weight: 400;
+        font-size: var(--font-size);
+        text-align: center;
+        color: #575757;
+        margin-bottom: 17rem;
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+        font-weight: 600;
+        font-size: var(--font-size);
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--hover-color);
+
+        & svg {
+            fill: var(--hover-color);
+        }
+    }
+}

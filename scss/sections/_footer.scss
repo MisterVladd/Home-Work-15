@@ -1,0 +1,91 @@
+.footer {
+    background: #f9f1fe;
+    padding: 106rem 0rem 81rem 0rem;
+    margin-top: 130rem;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+            gap: 30rem;
+            text-align: center;
+        }
+    }
+
+    &__diagnostic {
+        max-width: 431rem;
+    }
+
+    &__address {
+        max-width: 285rem;
+    }
+
+    &__opening {
+        max-width: 220rem;
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 37rem;
+    }
+
+    &__tel {
+        display: flex;
+        gap: var(--font-size);
+        @include mobile{
+            justify-content: center;
+        }
+    }
+}
+
+.diagnostic {
+
+    &__title {
+        font-weight: 600;
+        font-size: 24rem;
+        color: var(--color-desc);
+        margin-bottom: 26rem;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: var(--font-size);
+        color: var(--color-desc);
+    }
+}
+
+.address {
+
+    &__title {
+        font-weight: 600;
+        font-size: 20rem;
+        color: var(--color-desc);
+        margin-bottom: 9rem;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: var(--font-size);
+        color: var(--color-desc);
+    }
+}
+
+.opening {
+
+    &__title {
+        font-weight: 600;
+        font-size: 20rem;
+        color: var(--color-desc);
+        margin-bottom: 17rem;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: var(--font-size);
+        color: var(--color-desc);
+        margin-bottom: 15rem;
+    }
+}
