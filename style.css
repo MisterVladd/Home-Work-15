@@ -49,6 +49,12 @@ body {
   font-family: var(--ff);
 }
 
+@media screen and (max-width: 1042px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
+
 .container {
   padding: 0 20rem;
   max-width: 1210rem;
@@ -402,6 +408,11 @@ body {
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
+@media screen and (max-width: 652px) {
+  .owl-carousel .owl-stage-outer {
+    border-radius: 12px;
+  }
+}
 
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
@@ -427,6 +438,11 @@ body {
   display: block;
   width: 100%;
   border-radius: 30px;
+}
+@media screen and (max-width: 652px) {
+  .owl-carousel .owl-item img {
+    border-radius: 12px;
+  }
 }
 
 .owl-carousel .owl-nav.disabled,

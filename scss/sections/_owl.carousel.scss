@@ -38,6 +38,10 @@
   border-radius: 30px;
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
+
+  @include mobile {
+    border-radius: 12px;
+  }
 }
 
 .owl-carousel .owl-wrapper,
@@ -64,6 +68,10 @@
   display: block;
   width: 100%;
   border-radius: 30px;
+
+  @include mobile {
+    border-radius: 12px;
+  }
 }
 
 .owl-carousel .owl-nav.disabled,
@@ -111,7 +119,8 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  @include mobile{
+
+  @include mobile {
     width: 10px;
     height: 10px;
   }
